@@ -146,7 +146,7 @@ const AiAutomationSection = ({ onNavigate }) => {
                         </span>
                       </div>
 
-                      <h3 className="text-2xl font-black uppercase tracking-wider text-[#211F1C] mb-1">
+                      <h3 className="text-xl xl:text-2xl font-black uppercase tracking-wide text-[#211F1C] mb-1">
                         {node.label}
                       </h3>
                       <p className="text-[11px] uppercase tracking-wider text-[#6F6961] mb-4">

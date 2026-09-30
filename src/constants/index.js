@@ -762,7 +762,7 @@ export const AI_WORKFLOW_STEPS = [
   {
     id: "qualification",
     step: "03",
-    label: "QUALIFICATION",
+    label: "QUALIFY",
     sublabel: "Lead Qualification",
     description:
       "The system captures key requirement details, service interest, and contact information.",
