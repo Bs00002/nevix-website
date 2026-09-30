@@ -768,17 +768,28 @@ const Contact = ({ onNavigate, isStandalonePage = false }) => {
             iconClassName="text-[#C97A67]"
           />
         </div>
-        <div className="max-w-[1440px] mx-auto px-4 sm:px-6 lg:px-10 py-6 border-t border-[#DDD6CB] flex flex-col sm:flex-row items-center justify-between gap-4 text-xs text-[#6F6961]">
-          <div className="flex flex-col sm:flex-row items-center gap-2 sm:gap-3 text-center sm:text-left">
+        <div className="max-w-[1440px] mx-auto px-4 sm:px-6 lg:px-10 py-6 border-t border-[#DDD6CB] flex flex-col md:flex-row items-center justify-between gap-4 text-xs text-[#6F6961]">
+          {/* Copyright & Location */}
+          <div className="text-center md:text-left">
             <span>
               © {new Date().getFullYear()} {BRAND.name}. All rights reserved. • {BRAND.location}.
             </span>
-            <span className="hidden sm:inline text-[#C0B9AD]">•</span>
-            <span className="text-[#292622] font-medium">
-              Developed &amp; Designed by <span className="text-[#C97A67] font-semibold tracking-wide">NEVIX</span>
-            </span>
           </div>
-          <div className="flex flex-wrap items-center gap-6">
+
+          {/* Center: Designed & Developed by NEVIX (Clicking NEVIX connects to phone number) */}
+          <div className="text-center font-medium text-[#292622]">
+            <span className="text-[#6F6961]">Designed &amp; Developed by </span>
+            <a
+              href={`tel:${BRAND.phoneRaw}`}
+              className="font-bold text-[#C97A67] hover:text-[#211F1C] underline decoration-[#C97A67] underline-offset-4 transition-colors"
+              title={`Call / Connect: ${BRAND.phone}`}
+            >
+              NEVIX
+            </a>
+          </div>
+
+          {/* Right: Instagram & WhatsApp */}
+          <div className="flex flex-wrap items-center justify-center md:justify-end gap-6">
             <a
               href={BRAND.instagram}
               target="_blank"
