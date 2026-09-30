@@ -769,9 +769,15 @@ const Contact = ({ onNavigate, isStandalonePage = false }) => {
           />
         </div>
         <div className="max-w-[1440px] mx-auto px-4 sm:px-6 lg:px-10 py-6 border-t border-[#DDD6CB] flex flex-col sm:flex-row items-center justify-between gap-4 text-xs text-[#6F6961]">
-          <span>
-            © {new Date().getFullYear()} {BRAND.name}. All rights reserved. • {BRAND.location}.
-          </span>
+          <div className="flex flex-col sm:flex-row items-center gap-2 sm:gap-3 text-center sm:text-left">
+            <span>
+              © {new Date().getFullYear()} {BRAND.name}. All rights reserved. • {BRAND.location}.
+            </span>
+            <span className="hidden sm:inline text-[#C0B9AD]">•</span>
+            <span className="text-[#292622] font-medium">
+              Developed &amp; Designed by <span className="text-[#C97A67] font-semibold tracking-wide">NEVIX</span>
+            </span>
+          </div>
           <div className="flex flex-wrap items-center gap-6">
             <a
               href={BRAND.instagram}
